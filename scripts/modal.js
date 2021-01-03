@@ -224,9 +224,18 @@ $(document).ready(function() {
       $(this).text(modalText[id].bullets[index]);
     });
     $.each($('#modal .slide'), function(index, value) {
+      var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+      var isIE = /*@cc_on!@*/false || !!document.documentMode;
+      var bgurl = "url('img/slides/" + id + '-' + index + ".webp') center center/cover";
+      console.log(isSafari, isIE);
+
+      if (isSafari || isIE === true) {
+        bgurl = "url('img/slides/" + id + '-' + index + ".png') center center/cover";
+      }
       $(this).css({
+        
         background:
-          "url('img/slides/" + id + '-' + index + ".png') center center/cover",
+          bgurl,
         backgroundSize: 'cover'
       });
     });
