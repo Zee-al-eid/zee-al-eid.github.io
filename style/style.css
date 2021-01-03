@@ -1,32 +1,40 @@
 * {
-  cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur116.cur), auto !important;
+  cursor: url(../img/icons/blue.cur), auto !important;
 }
 .page-link,
 .hamburger,
 .close,
-.work-arrow,
 .arrow,
 .arr,
 input[type="text"],
 input[type="email"],
 textarea,
 .filter {
-  cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur119.cur), auto !important;
+  cursor: url(../img/icons/pink.cur), auto !important;
 }
 .button,
 .button2,
+.work-arrow,
+.mdi-arrow-right,
 .icon,
 .fa,
 .exlink,
 .close img {
-  cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur117.cur), auto !important;
+  cursor: url(../img/icons/red.cur), auto !important;
 }
-
-.hamburger {
+.mdi-a .hamburger {
   margin-top: 15px;
 }
 .work-arrow {
   margin-right: 6px;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow:hover {
+  background-color: #e31b6d;
 }
 #blog {
   background-color: #f5f5f5;
@@ -34,18 +42,25 @@ textarea,
 .first2icons {
   margin-top: 1.1vh;
 }
-
+.fa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Regular.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Raleway-semibold";
   src: url("../fonts/Raleway-SemiBold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Raleway-bold";
   src: url("../fonts/Raleway-Bold.ttf");
+  font-display: swap;
 }
 @keyframes fadeIn {
   100% {
