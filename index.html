@@ -27,7 +27,7 @@
     <title>ZEE-AL-EID AHMED</title>
     <!-- HOSTED -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800&display=swap"
       rel="stylesheet"
       type="text/css"
     />
@@ -53,6 +53,12 @@
 
     <!-- LOCAL -->
     <script src="scripts/index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"
+      integrity="sha512-94MnA5fk4ngfEGlKGdjFS+14eskTJP+/m0QhYZKCv74+eeRPleLLqm3J9cvKxjyXu/TUywNtE+DaJni2epBGSg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/modal.js"></script>
   </head>
 
   <body>
@@ -333,15 +339,17 @@
           <div class="flex row">
             <div class="filter" data-filter="all">ALL</div>
             <div class="filter" data-filter=".css">CSS</div>
-            <div class="filter" data-filter=".js">JAVASCRIPT</div>
-            <div class="filter" data-filter=".react">REACT-JS</div>
+            <div class="filter" data-filter=".js">JS</div>
+            <div class="filter" data-filter=".react">REACT</div>
+            <div class="filter" data-filter=".wp">WORDPRESS</div>
           </div>
           <div class="float-bar">
             <div class="flex row">
               <div class="filter" data-filter="all">ALL</div>
               <div class="filter" data-filter=".css">CSS</div>
-              <div class="filter" data-filter=".js">JAVASCRIPT</div>
-              <div class="filter" data-filter=".react">REACT-JS</div>
+              <div class="filter" data-filter=".js">JS</div>
+              <div class="filter" data-filter=".react">REACT</div>
+              <div class="filter" data-filter=".wp">WORDPRESS</div>
             </div>
           </div>
         </div>
@@ -349,7 +357,7 @@
         <div id="gallery" class="container flex row wrap waypoint">
           <div class="mix react" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmParallaxPortfolio"></div>
               <div class="text">
                 <div class="bold">Parallax Portfolio</div>
                 <span class="highlight">React JS</span>
@@ -360,7 +368,7 @@
 
           <div class="mix react" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmAwesomePortfolio"></div>
               <div class="text">
                 <div class="bold">Awesome Portfolio</div>
                 <span class="highlight">React JS</span>
@@ -369,9 +377,20 @@
             </div>
           </div>
 
+          <div class="mix wp" data-my-order="1">
+            <div>
+              <div class="card" id="thmZeeCommerce" title="Zee Commerce"></div>
+              <div class="text">
+                <div class="bold">Zee Commerce</div>
+                <span class="highlight">WordPress</span>
+              </div>
+              <div class="button" id="zeeCommerce">LEARN MORE</div>
+            </div>
+          </div>
+
           <div class="mix js css" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmHostee"></div>
               <div class="text">
                 <div class="bold">Hostee Website</div>
                 <span class="highlight">JavaScript / CSS</span>
@@ -382,7 +401,7 @@
 
           <div class="mix js" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmGradientGenerator"></div>
               <div class="text">
                 <div class="bold">Gradient Generator</div>
                 <span class="highlight">JavaScript</span>
@@ -393,7 +412,7 @@
 
           <div class="mix js" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmRandomColor"></div>
               <div class="text">
                 <div class="bold">Random Color Generator</div>
                 <span class="highlight">JavaScript</span>
@@ -404,7 +423,7 @@
 
           <div class="mix js" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmReviewsSlider"></div>
               <div class="text">
                 <div class="bold">Reviews Slider</div>
                 <span class="highlight">JavaScript</span>
@@ -415,7 +434,7 @@
 
           <div class="mix js css" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmDarkLightMode"></div>
               <div class="text">
                 <div class="bold">Dark/Light Mode</div>
                 <span class="highlight">CSS / JavaScript</span>
@@ -426,7 +445,7 @@
 
           <div class="mix js" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmQnA"></div>
               <div class="text">
                 <div class="bold">Q-n-A / FAQ</div>
                 <span class="highlight">JavaScript</span>
@@ -437,7 +456,7 @@
 
           <div class="mix js" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmTabsMenu"></div>
               <div class="text">
                 <div class="bold">Tabs Menu</div>
                 <span class="highlight">JavaScript</span>
@@ -448,7 +467,7 @@
 
           <div class="mix js" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmElasticSlider"></div>
               <div class="text">
                 <div class="bold">Slider | Elastic Transiton</div>
                 <span class="highlight">JavaScript</span>
@@ -459,7 +478,7 @@
 
           <div class="mix js" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmShuffleSlider"></div>
               <div class="text">
                 <div class="bold">Slider | Shuffle Transiton</div>
                 <span class="highlight">JavaScript</span>
@@ -470,7 +489,7 @@
 
           <div class="mix css" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmMenuHover"></div>
               <div class="text">
                 <div class="bold">Menu Hover Effect</div>
                 <span class="highlight">CSS</span>
@@ -481,7 +500,7 @@
 
           <div class="mix css" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmCardHover"></div>
               <div class="text">
                 <div class="bold">Card Hover Effect</div>
                 <span class="highlight">CSS</span>
@@ -492,7 +511,7 @@
 
           <div class="mix css" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmEcommerceCard"></div>
               <div class="text">
                 <div class="bold">E-Commerce Card</div>
                 <span class="highlight">CSS</span>
@@ -503,7 +522,7 @@
 
           <div class="mix css" data-my-order="1">
             <div>
-              <div class="card"></div>
+              <div class="card" id="thmCheckBoxUI"></div>
               <div class="text">
                 <div class="bold">CheckBox UI</div>
                 <span class="highlight">CSS</span>
@@ -641,7 +660,7 @@
     <div id="preload">
       <img src="img/me.png" />
       <img src="img/filler.html" />
-      <img src="img/thumb-1.png" />
+      <!-- <img src="img/thumb-1.png" />
       <img src="img/thumb-2.png" />
       <img src="img/thumb-3.png" />
       <img src="img/thumb-4.png" />
@@ -655,8 +674,8 @@
       <img src="img/thumb-12.png" />
       <img src="img/thumb-13.png" />
       <img src="img/thumb-14.png" />
-      <img src="img/thumb-15.png" />
-      <img src="img/slides/parallaxPortfolio-0.png" />
+      <img src="img/thumb-15.png" /> -->
+      <!-- <img src="img/slides/parallaxPortfolio-0.png" />
       <img src="img/slides/parallaxPortfolio-1.png" />
       <img src="img/slides/parallaxPortfolio-2.png" />
       <img src="img/slides/awesomePortfolio-0.png" />
@@ -700,16 +719,10 @@
       <img src="img/slides/ecommerceCard-2.png" />
       <img src="img/slides/checkBoxUI-0.png" />
       <img src="img/slides/checkBoxUI-1.png" />
-      <img src="img/slides/checkBoxUI-2.png" />
+      <img src="img/slides/checkBoxUI-2.png" /> -->
     </div>
   </body>
 </html>
 
 <script src="scripts/pt.min.js"></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"
-  integrity="sha512-94MnA5fk4ngfEGlKGdjFS+14eskTJP+/m0QhYZKCv74+eeRPleLLqm3J9cvKxjyXu/TUywNtE+DaJni2epBGSg=="
-  crossorigin="anonymous"
-></script>
-<script src="scripts/modal.js"></script>
 <script src="scripts/canvas.js"></script>

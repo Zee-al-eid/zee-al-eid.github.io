@@ -127,7 +127,31 @@ $(function() {
 
   // GALLERY
   $('#gallery').mixItUp({});
-
+  setthm = (id)=> {
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+    var isIE = false || !!document.documentMode;
+    var thmimgurl = "url('img/"+id+".webp') 50%/cover";
+    if (isSafari || isIE !== false) {thmimgurl = "url('img/"+id+".png') 50%/cover";}
+    var thumbnail = document.getElementById(id)
+      thumbnail.style.background = thmimgurl
+    };
+    
+setthm('thmParallaxPortfolio');
+setthm('thmAwesomePortfolio');
+setthm('thmZeeCommerce');
+setthm('thmHostee');
+setthm('thmGradientGenerator');
+setthm('thmRandomColor');
+setthm('thmReviewsSlider');
+setthm('thmDarkLightMode');
+setthm('thmQnA');
+setthm('thmTabsMenu');
+setthm('thmElasticSlider');
+setthm('thmShuffleSlider');
+setthm('thmMenuHover');
+setthm('thmCardHover');
+setthm('thmEcommerceCard');
+setthm('thmCheckBoxUI');
   function mixClear() {
     setTimeout(function() {
       $('#gallery').removeClass('waypoint');

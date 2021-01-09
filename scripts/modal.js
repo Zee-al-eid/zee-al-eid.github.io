@@ -9,6 +9,13 @@ $(document).ready(function() {
       link: 'https://parallax-portfolio.netlify.app/',
       link2: 'https://github.com/Zee-al-eid/parallax-portfolio'
     },
+    zeeCommerce: {
+      title: 'Zee Commerce',
+      tag: 'E-Commerce Website',
+      detail:
+        'Playful and Colorful One-Page portfolio featuring Parallax effects and animations and have Light/Dark mode.',
+      link: 'http://zeealeid.great-site.net/1/'
+    },
     awesomePortfolio: {
       title: 'Awesome Portfolio',
       tag: 'CLEAN AND MODERN PORTFOLIO',
@@ -225,17 +232,13 @@ $(document).ready(function() {
     });
     $.each($('#modal .slide'), function(index, value) {
       var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
-      var isIE = /*@cc_on!@*/false || !!document.documentMode;
+      var isIE = false || !!document.documentMode;
       var bgurl = "url('img/slides/" + id + '-' + index + ".webp') center center/cover";
-      console.log(isSafari, isIE);
-
-      if (isSafari || isIE === true) {
+      if (isSafari || isIE !== false) {
         bgurl = "url('img/slides/" + id + '-' + index + ".png') center center/cover";
       }
       $(this).css({
-        
-        background:
-          bgurl,
+        background:bgurl,
         backgroundSize: 'cover'
       });
     });
